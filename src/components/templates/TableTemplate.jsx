@@ -7,7 +7,7 @@ import usePagination from "@/hooks/Paginate/usePaginate";
 import useSort from "@/hooks/Sort/useSort";
 import { useSearchParams } from "next/navigation";
 import { getSingleQuery } from "@/utils/Query/GetSingleQuery";
-
+import { itemsCount } from "@/constants/constant";
 const TableTemplate = ({ data, pageQuery, sortQuery }) => {
   const [queryValue, setQueryValue] = useState(1);
   const { sortedData } = useSort(data, sortQuery);
@@ -15,7 +15,7 @@ const TableTemplate = ({ data, pageQuery, sortQuery }) => {
   const { currentPageData, pagesCount } = usePagination(
     sortedData,
     queryValue,
-    5
+    itemsCount
   );
 
   useEffect(() => {

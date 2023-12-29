@@ -1,6 +1,6 @@
 import { getLocalData } from "@/utils/Fetch/GetLocalData";
 import React from "react";
-import Layout from "./_components/layout/Layout";
+import Layout from "./_components/layout/SearchSection";
 import Search from "@/components/modules/Search/Search";
 
 const SearchPage = async () => {
