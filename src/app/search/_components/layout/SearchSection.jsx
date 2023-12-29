@@ -5,7 +5,7 @@ import { getSingleQuery } from "@/utils/Query/GetSingleQuery";
 import { useSearchParams } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
-const Layout = ({ data }) => {
+const SearchSection = ({ data }) => {
   const [searchTerm, setSearchTerm] = useState("");
   const { filteredData } = useDataFilter(
     data,
@@ -36,4 +36,4 @@ const Layout = ({ data }) => {
   );
 };
 
-export default Layout;
+export default SearchSection;
