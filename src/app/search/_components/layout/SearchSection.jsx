@@ -24,7 +24,7 @@ const SearchSection = ({ data }) => {
     <>
       {Object.entries(filteredData).map((item) => (
         <div key={item[1].query} className="my-5 ">
-          <h4>{item[0]}</h4>
+          <h4 className="px-10 text-bold">Result filter by {item[0]}</h4>
           <TableTemplate
             pageQuery={`${item[1].query}_page`}
             sortQuery={`${item[1].query}_sort`}

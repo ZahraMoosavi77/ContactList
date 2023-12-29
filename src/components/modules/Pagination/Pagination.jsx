@@ -21,7 +21,7 @@ const Pagination = ({ pagesCount, currentPage, query }) => {
   return (
     <div className="flex flex-col items-center">
       <span className="text-sm text-gray-700 dark:text-gray-400">
-        Showing{" "}
+        page{" "}
         <span className="font-semibold text-gray-900 dark:text-white">
           {currentPage}
         </span>{" "}
@@ -29,7 +29,7 @@ const Pagination = ({ pagesCount, currentPage, query }) => {
         <span className="font-semibold text-gray-900 dark:text-white">
           {pagesCount}
         </span>{" "}
-        Entries
+        pages
       </span>
       <div className="inline-flex mt-2 xs:mt-0">
         <button

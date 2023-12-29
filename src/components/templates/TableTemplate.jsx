@@ -30,7 +30,7 @@ const TableTemplate = ({ data, pageQuery, sortQuery }) => {
   return (
     <>
       {currentPageData.length > 0 ? (
-        <div className="container p-5 md:px-0 flex flex-col gap-5">
+        <div className="container p-5 md:px-10 flex flex-col gap-5 ">
           <div className="flex gap-2 ">
             <Sort query={sortQuery} />
           </div>
@@ -46,7 +46,7 @@ const TableTemplate = ({ data, pageQuery, sortQuery }) => {
           </div>
         </div>
       ) : (
-        <span>No Result</span>
+        <span className="p-10">No Result</span>
       )}
     </>
   );
