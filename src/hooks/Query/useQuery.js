@@ -10,9 +10,7 @@ export function useQueryParams() {
     current.append(name, value);
     const search = current.toString();
     const query = search ? `?${search}` : "";
-    sessionStorage.setItem("scrollPosition", window.scrollY);
-    router.push(`${pathname}${query}`);
-    // window.history.pushState(null, "", `${pathname}${query}`);
+    router.push(`${pathname}${query}`, {scroll : false});
   };
 
   const updateQueryParam = (name, value) => {
@@ -20,9 +18,7 @@ export function useQueryParams() {
     current.set(name, value);
     const search = current.toString();
     const query = search ? `?${search}` : "";
-    sessionStorage.setItem("scrollPosition", window.scrollY);
-    router.push(`${pathname}${query}`);
-    // window.history.pushState(null, "", `${pathname}${query}`);
+    router.push(`${pathname}${query}`, {scroll : false});
   };
 
   const deleteQueryParam = (name) => {
@@ -30,9 +26,7 @@ export function useQueryParams() {
     current.delete(name);
     const search = current.toString();
     const query = search ? `?${search}` : "";
-    sessionStorage.setItem("scrollPosition", window.scrollY);
-    router.push(`${pathname}${query}`);
-    // window.history.pushState(null, "", `${pathname}${query}`);
+    router.push(`${pathname}${query}`, {scroll : false});
   };
 
   return { addQueryParam, updateQueryParam, deleteQueryParam };

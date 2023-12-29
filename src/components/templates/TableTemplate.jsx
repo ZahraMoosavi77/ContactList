@@ -19,10 +19,6 @@ const TableTemplate = ({ data, pageQuery, sortQuery }) => {
   );
 
   useEffect(() => {
-    const scrollPosition = sessionStorage.getItem("scrollPosition");
-    if (scrollPosition) {
-      window.scrollTo(0, parseInt(scrollPosition));
-    }
     const query = getSingleQuery(pageQuery);
     setQueryValue(query || 1);
   }, [searchParams.get(pageQuery), searchParams.get(sortQuery)]);
